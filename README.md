@@ -1,5 +1,5 @@
 ### Shelly-prometheus-exporter
-This exporter was quickly made, may include some errors
+This repository is not activly maintained
 
 ### What you'll need
 - Basic understanding of Docker, Python, Prometheus
