@@ -24,7 +24,7 @@ services:
       - 8000:8000
     container_name: shelly-exporter
     environment:
-      - SHELLY_HOST=http://192.168.x.x
+      - SHELLY_HOSTS=192.168.xx.xx,192.168.xx.xx
       - POLL_INTERVAL=5
       - PORT=8000
     image: latenightweeb/shelly-prometheus:latest
@@ -45,4 +45,10 @@ Add this to your prometheus.yml
   scrape_interval: 5s
   static_configs:
     - targets: ['192.168.x.x:8000']
+```
+
+#### Grafana
+Inside Grafana (or Prometheus) you can query the metrics using for example:
+```
+shelly_power_watts{host="192.168.xx.xx"}
 ```
