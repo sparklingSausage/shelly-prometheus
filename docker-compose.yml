@@ -1,0 +1,10 @@
+services:
+  shelly-exporter:
+    ports:
+      - 8000:8000
+    container_name: shelly-exporter
+    environment:
+      - SHELLY_HOST: http://192.168.x.xx
+      - POLL_INTERVAL: 10
+      - PORT: 8000
+    image: latenightweeb/shelly-prometheus:latest
