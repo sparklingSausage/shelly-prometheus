@@ -8,23 +8,19 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# Read environment variables
 HOSTS = os.getenv("SHELLY_HOSTS", "").split(",")
 POLL_INTERVAL = int(os.getenv("POLL_INTERVAL", 10))
 PORT = int(os.getenv("PORT", 8000))
 
-# Flask app and Prometheus registry
 app = Flask(__name__)
 REGISTRY = CollectorRegistry()
 
-# Define metrics with host label
 power_watts = Gauge("shelly_power_watts", "Power usage in watts", ["host"], registry=REGISTRY)
 relay_state = Gauge("shelly_relay_state", "Relay state (0=off, 1=on)", ["host"], registry=REGISTRY)
 energy_total = Gauge("shelly_energy_kwh", "Total energy in kWh", ["host"], registry=REGISTRY)
 voltage = Gauge("shelly_voltage_volts", "Voltage in volts", ["host"], registry=REGISTRY)
 
 def poll_shelly(host):
-    # Strip protocol for clean Prometheus label
     host_label = host.replace("http://", "").replace("https://", "").strip()
 
     while True:
