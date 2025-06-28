@@ -27,7 +27,7 @@ services:
       - SHELLY_HOSTS=192.168.xx.xx,192.168.xx.xx
       - POLL_INTERVAL=5
       - PORT=8000
-    image: latenightweeb/shelly-prometheus:latest
+    image: sparklingsausage/shelly-prometheus:latest
 ```
 
 #### Python
