@@ -1,11 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shelly Exporter Metrics</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #575757;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .card {
+      background-color: rgb(52, 52, 52);
+      padding: 2em;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      color: white;
+    }
+    a {
+      display: inline-block;
+      padding: 1em 2em;
+      margin-top: 1em;
+      background-color: #7f009f;
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    a:hover {
+      background-color: #52006d;
+    }
+  </style>
 </head>
 <body>
-    <a href="http://localhost:8000"></a>
+  <div class="card">
+    <h1>Shelly Power Exporter</h1>
+    <a href="/metrics" target="_blank">Go to /metrics</a>
+  </div>
 </body>
 </html>
