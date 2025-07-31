@@ -2,7 +2,7 @@ import os
 import time
 import threading
 import requests
-from flask import Flask, Response
+from flask import Flask, Response, render_template
 from prometheus_client import Gauge, generate_latest, CollectorRegistry, CONTENT_TYPE_LATEST
 from dotenv import load_dotenv
 
@@ -53,6 +53,10 @@ def poll_shelly(host):
 @app.route("/metrics")
 def metrics():
     return Response(generate_latest(REGISTRY), mimetype=CONTENT_TYPE_LATEST)
+
+@app.route("/")
+def index():
+    return render_template('index.html')
 
 if __name__ == "__main__":
     if not HOSTS or HOSTS == [""]:
