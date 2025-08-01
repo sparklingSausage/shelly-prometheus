@@ -1,8 +1,8 @@
 # Shelly-prometheus-exporter
 <p float="left">
-  <img src="https://github.com/sparklingSausage/shelly-prometheus/blob/main/images/prometheus.png" alt="Prometheus Logo" height="100px">
-  <img src="https://github.com/sparklingSausage/shelly-prometheus/blob/main/images/shelly.png" alt="Shelly Logo" height="100px">
-  <img src="https://github.com/sparklingSausage/shelly-prometheus/blob/main/images/python.png" alt="Python Logo" height="100px">
+  <img src="https://raw.githubusercontent.com/sparklingSausage/shelly-prometheus/main/images/prometheus.png" alt="Prometheus Logo" height="100px">
+  <img src="https://raw.githubusercontent.com/sparklingSausage/shelly-prometheus/main/images/shelly.png" alt="Shelly Logo" height="100px">
+  <img src="https://raw.githubusercontent.com/sparklingSausage/shelly-prometheus/main/images/python.png" alt="Python Logo" height="100px">
 </p>
 
 # What you'll need
