@@ -1,7 +1,7 @@
-### Shelly-prometheus-exporter
+# Shelly-prometheus-exporter
 This repository is not actively maintained
 
-### What you'll need
+# What you'll need
 - Basic understanding of Docker, Python, Prometheus
 - Shelly plug s gen3
 - Docker or Python
@@ -9,13 +9,13 @@ This repository is not actively maintained
 - (Grafana) for displaying the metrics
 
 
-### Structure
+# Structure
 - Installation using [Docker](#Docker)
 - Installation using [Python](#Python)
 - [Prometheus config](#Prometheus)
 
 
-#### Docker
+## Docker
 Run it using the [Docker Compose](docker-compose.yml)
 ```
 services:
@@ -30,7 +30,7 @@ services:
     image: sparklingsausage/shelly-prometheus:latest
 ```
 
-#### Python
+## Python
 Download the [python exporter](exporter.py) file and install all [requirements](requirements.txt) using pip.
 Run the it using python
 
@@ -38,7 +38,7 @@ Run the it using python
 python exporter.py
 ```
 
-#### Prometheus
+## Prometheus
 Add this to your prometheus.yml
 ```
 - job_name: 'shelly_plug'
@@ -47,7 +47,7 @@ Add this to your prometheus.yml
     - targets: ['192.168.x.x:8000']
 ```
 
-#### Grafana
+## Grafana
 Inside Grafana (or Prometheus) you can query the metrics using for example:
 ```
 shelly_power_watts{host="192.168.xx.xx"}
