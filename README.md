@@ -1,5 +1,9 @@
 # Shelly-prometheus-exporter
-This repository is not actively maintained
+<p float="left">
+  <img src="images/prometheus.png" alt="Prometheus Logo" height="100px">
+  <img src="images/shelly.png" alt="Shelly Logo" height="100px">
+  <img src="images/python.png" alt="Python Logo" height="100px">
+</p>
 
 # What you'll need
 - Basic understanding of Docker, Python, Prometheus
